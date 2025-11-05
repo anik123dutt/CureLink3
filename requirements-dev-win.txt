@@ -1,0 +1,47 @@
+# --- Core web stack ---
+Django==5.2.4
+channels==4.2.2
+daphne==4.1.2
+whitenoise==6.8.2
+dj-database-url==2.3.0
+
+# (Add these back later if you actually enable Redis on Render)
+# channels_redis==4.2.1
+# redis==5.0.8
+
+# --- Task queue (only if you actually run Celery worker; okay to keep installed) ---
+celery==5.5.3
+kombu==5.5.4
+billiard==4.2.1
+amqp==5.3.1
+
+# --- Libs you actually use in your views ---
+asgiref==3.9.1
+geopy==2.4.1
+python-dateutil==2.9.0.post0
+pytz==2025.1
+requests==2.32.3
+xhtml2pdf==0.2.17
+reportlab==4.4.2
+lxml==6.0.0
+beautifulsoup4==4.13.3
+html5lib==1.1
+cssselect2==0.8.0
+tinycss2==1.4.0
+svglib==1.5.1
+
+# --- Data/ML (remove if not needed on server) ---
+numpy==2.1.1
+pandas==2.2.3
+scikit-learn==1.7.0
+scipy==1.15.2
+
+# --- Windows-only utilities (won't install on Render/Linux) ---
+pywin32==308 ; sys_platform == "win32"
+MouseInfo==0.1.3 ; sys_platform == "win32"
+PyAutoGUI==0.9.54 ; sys_platform == "win32"
+PyGetWindow==0.0.9 ; sys_platform == "win32"
+PyRect==0.2.0 ; sys_platform == "win32"
+PyScreeze==1.0.1 ; sys_platform == "win32"
+PyMsgBox==1.0.9 ; sys_platform == "win32"
+pywhatkit==5.4 ; sys_platform == "win32"
